@@ -236,7 +236,7 @@ export default function SolicitudForm() {
         <div className="max-w-4xl mx-auto p-6 bg-white rounded-xl shadow-2xl">
             <h1 className="text-3xl font-extrabold text-indigo-700 mb-6 flex items-center">
                 <FileText size={28} className="mr-3" />
-                Nueva Solicitud de Taller Mecánico
+                Nueva Solicitud
             </h1>
             
             <FeedbackMessage 
