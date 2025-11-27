@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -110,10 +111,11 @@ export default function Login() {
                   <span>Recordarme</span>
                 </label>
 
-                <button type="button" className="text-sm text-blue-600 hover:underline">
-                  ¿Olvidaste tu contraseña?
-                </button>
-              </div>
+                <Link to="/reset-password" className="text-sm text-blue-600 hover:underline">
+      ¿Olvidaste tu contraseña?
+    </Link>
+  </div>
+
 
               <div>
                 <button
@@ -124,7 +126,14 @@ export default function Login() {
                   {loading ? "Cargando..." : "Iniciar sesión"}
                 </button>
               </div>
-
+<div className="text-center mt-4">
+  <span className="text-sm text-gray-600">
+    ¿No tienes cuenta aún?{" "}
+    <Link to="/registro" className="text-blue-600 hover:underline font-medium">
+      Regístrate aquí
+    </Link>
+  </span>
+</div>
               <div className="pt-2 text-xs text-gray-400">
                 Acceso autorizado exclusivamente con correo institucional.
               </div>
